@@ -12,14 +12,14 @@ private class MapConversionTest {
         }
         
         Set<Id> accountIds = MapConversion.convertSet(mapOfOpportunityIdToAccountId).keySet();                
-        System.assertEquals(3, accountIds.size());
+        System.assertEquals(3, accountIds.size(), 'Three account Ids should be returned.');
     }
     
     @isTest
     static void testNullInput(){
 
         Map<Id, List<Id>> mapAccountIdListOpportunityId = MapConversion.convertSet(null);
-        System.assertEquals(null, mapAccountIdListOpportunityId);
+        System.assertEquals(null, mapAccountIdListOpportunityId, 'null output is expected.');
     }
     
     @isTest
@@ -27,7 +27,7 @@ private class MapConversionTest {
 
         Map<Id, Id> mapOfOpportunityIdToAccountId = new Map<Id, Id>();
         Map<Id, List<Id>> mapAccountIdListOpportunityId = MapConversion.convertSet(mapOfOpportunityIdToAccountId);
-        System.assertEquals(null, mapAccountIdListOpportunityId);
+        System.assertEquals(null, mapAccountIdListOpportunityId, 'null output is expected.');
     }    
     
     private static void setupData(){
