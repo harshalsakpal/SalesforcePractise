@@ -1,2 +1,1 @@
-# SalesforcePractise
-Harshal's practise &amp; adhoc problem solving
+Harshal's practise & adhoc problem solving
