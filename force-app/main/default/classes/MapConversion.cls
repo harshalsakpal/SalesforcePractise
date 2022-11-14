@@ -18,11 +18,9 @@ public class MapConversion {
         if(opportunityIdToAccountId != null && opportunityIdToAccountId.isEmpty() == false) {
 
             accountIdToOpportunityIdList = new Map<Id, List<Id>>();
-            
             for(Id oppId: opportunityIdToAccountId.keySet()) {
 
                 Id accId = opportunityIdToAccountId.get(oppId);
-
                 if(accountIdToOpportunityIdList.containsKey(accId) == false) {
 
                     accountIdToOpportunityIdList.put(accId, new List<Id>());
